@@ -1,8 +1,8 @@
 import { Logo } from "@/lib/icons";
 import Link from "next/link";
-import Navigation from "./navigation";
-import MobileNavigation from "./mobileNavigation";
 import HeaderExtraInfo from "./headerExtraInfo";
+import MobileNavigation from "./mobileNavigation";
+import Navigation from "./navigation";
 
 export type MenuType = {
   id: number;
@@ -40,7 +40,7 @@ const menuList: MenuType[] = [
     label: "All Pages",
     href: "#",
     subMenu: [
-      { id: 1, label: "Contact", href: "/contact" },
+      { id: 1, label: "Contact", href: "#" },
       { id: 2, label: "Blog", href: "#" },
       // { id: 3, label: "Blog Details", href: "/blog/1" },
       { id: 4, label: "Sign Up", href: "#" },
@@ -54,7 +54,6 @@ const menuList: MenuType[] = [
 ];
 
 const Header = () => {
-
   return (
     <header className="sticky top-0 left-0 z-50 w-full overflow-x-clip bg-primary py-4">
       <div className="container">
@@ -66,8 +65,8 @@ const Header = () => {
             <Navigation data={menuList} />
           </div>
           <div className="flex items-center gap-7">
-            <HeaderExtraInfo  />
-            <MobileNavigation data={menuList}  />
+            <HeaderExtraInfo />
+            <MobileNavigation data={menuList} />
           </div>
         </div>
       </div>
